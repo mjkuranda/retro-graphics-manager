@@ -8,7 +8,8 @@ public class PaletteGenerator {
         BufferedImage img = new BufferedImage(32 * scale, 8 * scale, BufferedImage.TYPE_INT_RGB);
 
         for (int c = 0; c < 256; c++) {
-            int color = PaletteColor.get(c);
+            int color = PaletteColor.getDarker(c);
+            PaletteColor.print(color);
 
             for (int y = 0; y < scale; y++) {
                 for (int x = 0; x < scale; x++) {
