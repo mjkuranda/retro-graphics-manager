@@ -15,20 +15,6 @@ public class PaletteColor {
         return getDarker(idx) | 0b000111110001111100111111;
     }
 
-//    public static int get(int idx, boolean isDarker) {
-//        int r = (idx & 0b11100000) >> 5;
-//        int g = (idx & 0b00011100) >> 2;
-//        int b = idx & 0b00000011;
-//
-//        int color = (r << 21) | (g << 13) | (b << 6);
-//
-//        if (isDarker) {
-//            return color;
-//        }
-//
-//        return color | 0b000111110001111100111111;
-//    }
-
     public static void print(int color) {
         Color c = new Color(color);
         System.out.println("Color " + color + ": (" + c.getRed() + ", " + c.getGreen() + ", " + c.getBlue() + ")");
