@@ -1,5 +1,6 @@
 # Directories
 /out
+/dat
 
 # Compiled class file
 *.class
