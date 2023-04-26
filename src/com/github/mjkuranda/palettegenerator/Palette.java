@@ -25,4 +25,12 @@ public class Palette {
         return colors;
     }
 
+    public int getColor(int idx) {
+        if (idx < 0 || idx > 255) {
+            return -1;
+        }
+
+        return colors[idx];
+    }
+
 }
