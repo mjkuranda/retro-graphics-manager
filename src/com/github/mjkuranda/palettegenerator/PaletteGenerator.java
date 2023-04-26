@@ -35,7 +35,6 @@ public class PaletteGenerator {
                 // Scale
                 for (int ys = 0; ys < scale; ys++) {
                     for (int xs = 0; xs < scale; xs++) {
-//                        img.setRGB((c % 32) * scale + x, (c / 32) * scale + y, color);
                         img.setRGB((x * scale) + xs, (y * scale) + ys + (b * scale * 8), color);
                     }
                 }
