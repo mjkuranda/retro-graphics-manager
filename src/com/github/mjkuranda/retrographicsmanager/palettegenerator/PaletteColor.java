@@ -3,31 +3,27 @@ package com.github.mjkuranda.retrographicsmanager.palettegenerator;
 import java.awt.*;
 
 public class PaletteColor {
-    public static final int COLOR_MODE_DARKER = 0;
-    public static final int COLOR_MODE_BRIGHTER = 1;
 
-    public static int getIdx(int color) {
-        int r = (color & 0b111000000000000000000000) >> 16;
-        int g = (color & 0b000000001110000000000000) >> 8;
-        int b = (color & 0b000000000000000011000000) >> 6;
+    /***
+     * Get index of palette color between 0 and 255.
+     * @param color java.awt.Color
+     * @return Number between 0 and 255.
+     */
+    public static int getIdx(Color color) {
+        int col = color.getRGB();
+
+        int r = (col & 0b111000000000000000000000) >> 16;
+        int g = (col & 0b000000001110000000000000) >> 11;
+        int b = (col & 0b000000000000000011000000) >> 6;
 
         return r | g | b;
     }
 
-    public static int get(int idx, int mode) {
-        if (mode == COLOR_MODE_BRIGHTER) {
-            return getBrighter(idx);
-        }
-
-        return getDarker(idx);
-    }
-
-    public static int convertToRetro(int color, int mode) {
-        int idx = getIdx(color);
-
-        return get(idx, mode);
-    }
-
+    /***
+     * Returns darker palette color.
+     * @param idx number between 0 and 255 - color id.
+     * @return Palette darker color.
+     */
     public static int getDarker(int idx) {
         int r = (idx & 0b11100000) >> 5;
         int g = (idx & 0b00011100) >> 2;
@@ -35,12 +31,21 @@ public class PaletteColor {
 
         return (r << 21) | (g << 13) | (b << 6);
     }
+
+    /***
+     * Returns brighter palette color.
+     * @param idx number between 0 and 255 - color id.
+     * @return Palette brighter color.
+     */
     public static int getBrighter(int idx) {
         return getDarker(idx) | 0b000111110001111100111111;
     }
 
-    public static void print(int color) {
-        Color c = new Color(color);
-        System.out.println("Color " + color + ": (" + c.getRed() + ", " + c.getGreen() + ", " + c.getBlue() + ")");
+    /***
+     * Shows information about color value and RGB values.
+     * @param color java.awt.Color
+     */
+    public static void print(Color color) {
+        System.out.println("Color " + color.getRGB() + ": (" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")");
     }
 }
