@@ -1,8 +1,20 @@
-package com.github.mjkuranda.palettegenerator;
+package com.github.mjkuranda.retrographicsmanager.palettegenerator;
 
 import java.awt.*;
 
 public class PaletteColor {
+
+    public static int getIdx(int color) {
+        int r = (color & 0b111000000000000000000000) >> 16;
+        int g = (color & 0b000000001110000000000000) >> 8;
+        int b = (color & 0b000000000000000011000000) >> 6;
+
+        return r | g | b;
+    }
+
+    public static int get(int idx) {
+        return getDarker(idx);
+    }
 
     public static int getDarker(int idx) {
         int r = (idx & 0b11100000) >> 5;

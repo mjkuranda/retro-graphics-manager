@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2023-05-08
+### Added
+- [@mjkuranda](https://github.com/mjkuranda): Permitting on conversion for images in `input` directory.
+- [@mjkuranda](https://github.com/mjkuranda): ImageConverter converts images.
+- [@mjkuranda](https://github.com/mjkuranda): Color index to color and color to its index in the palette.
+
+### Changed
+- [@mjkuranda](https://github.com/mjkuranda): Project name to `Retro Graphics Manager`.
+- [@mjkuranda](https://github.com/mjkuranda): Project divided into two modules: `Palette Generator` and `Image Converter`.
+
 ## [1.1.0] - 2023-04-26
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Basic PaletteGenerator for darker and brighter palette.

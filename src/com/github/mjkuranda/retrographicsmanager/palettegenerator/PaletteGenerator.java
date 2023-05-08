@@ -1,4 +1,4 @@
-package com.github.mjkuranda.palettegenerator;
+package com.github.mjkuranda.retrographicsmanager.palettegenerator;
 
 import java.awt.image.BufferedImage;
 
