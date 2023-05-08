@@ -1,4 +1,4 @@
-package com.github.mjkuranda.palettegenerator;
+package com.github.mjkuranda.retrographicsmanager.palettegenerator;
 
 public class Palette {
     private int[] colors;
