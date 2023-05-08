@@ -3,6 +3,8 @@ package com.github.mjkuranda.retrographicsmanager.palettegenerator;
 import java.awt.*;
 
 public class PaletteColor {
+    public static final int COLOR_MODE_DARKER = 0;
+    public static final int COLOR_MODE_BRIGHTER = 1;
 
     public static int getIdx(int color) {
         int r = (color & 0b111000000000000000000000) >> 16;
@@ -12,14 +14,18 @@ public class PaletteColor {
         return r | g | b;
     }
 
-    public static int get(int idx) {
+    public static int get(int idx, int mode) {
+        if (mode == COLOR_MODE_BRIGHTER) {
+            return getBrighter(idx);
+        }
+
         return getDarker(idx);
     }
 
-    public static int convertToRetro(int color) {
+    public static int convertToRetro(int color, int mode) {
         int idx = getIdx(color);
 
-        return get(idx);
+        return get(idx, mode);
     }
 
     public static int getDarker(int idx) {

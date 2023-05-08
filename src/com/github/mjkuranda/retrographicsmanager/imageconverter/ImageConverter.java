@@ -19,22 +19,22 @@ public class ImageConverter {
         }
     }
 
-    public static BufferedImage toRetroImage(String fileName) {
+    public static BufferedImage toRetroImage(String fileName, int colorMode) {
         try {
             BufferedImage img = ImageIO.read(new File("dat/input/" + fileName));
 
-            return convert(img);
+            return convert(img, colorMode);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static BufferedImage convert(BufferedImage img) {
+    private static BufferedImage convert(BufferedImage img, int colorMode) {
         BufferedImage converted = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
 
         for (int x = 0; x < img.getWidth(); x++) {
             for (int y = 0; y < img.getHeight(); y++) {
-                int color = PaletteColor.convertToRetro(img.getRGB(x, y));
+                int color = PaletteColor.convertToRetro(img.getRGB(x, y), colorMode);
 
                 converted.setRGB(x, y, color);
             }
