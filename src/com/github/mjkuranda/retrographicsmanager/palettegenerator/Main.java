@@ -1,6 +1,6 @@
 package com.github.mjkuranda.retrographicsmanager.palettegenerator;
 
-import com.github.mjkuranda.retrographicsmanager.imageconverter.ImageConverter;
+import com.github.mjkuranda.retrographicsmanager.converters.ImageConverter;
 
 import java.awt.image.BufferedImage;
 
@@ -16,10 +16,10 @@ public class Main {
         PaletteWriter.rectanglePalette(paletteDarker, "palette-darker", 4);
         PaletteWriter.blockPalette(paletteDarker, "palette-block", 4);
 
-        BufferedImage img = ImageConverter.toRetroImage("retro.png", PaletteColor.COLOR_MODE_BRIGHTER);
+        BufferedImage img = ImageConverter.toRetroImage("retro.png", true);
         ImageConverter.saveImage(img, "retro-converted.png");
 
-        BufferedImage img2 = ImageConverter.toRetroImage("space.jpg", PaletteColor.COLOR_MODE_BRIGHTER);
+        BufferedImage img2 = ImageConverter.toRetroImage("space.jpg", true);
         ImageConverter.saveImage(img2, "space-converted.png");
     }
 }
