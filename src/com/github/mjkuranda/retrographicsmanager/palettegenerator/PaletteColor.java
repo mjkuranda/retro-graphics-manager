@@ -16,6 +16,12 @@ public class PaletteColor {
         return getDarker(idx);
     }
 
+    public static int convertToRetro(int color) {
+        int idx = getIdx(color);
+
+        return get(idx);
+    }
+
     public static int getDarker(int idx) {
         int r = (idx & 0b11100000) >> 5;
         int g = (idx & 0b00011100) >> 2;
