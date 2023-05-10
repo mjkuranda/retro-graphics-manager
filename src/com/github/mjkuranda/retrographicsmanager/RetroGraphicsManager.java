@@ -1,17 +1,14 @@
-package com.github.mjkuranda.retrographicsmanager.palettegenerator;
+package com.github.mjkuranda.retrographicsmanager;
 
 import com.github.mjkuranda.retrographicsmanager.converters.ImageConverter;
+import com.github.mjkuranda.retrographicsmanager.palettegenerator.Palette;
+import com.github.mjkuranda.retrographicsmanager.palettegenerator.PaletteWriter;
 
 import java.awt.image.BufferedImage;
 
-/***
- * @author mjkuranda
- */
-public class Main {
+public class RetroGraphicsManager {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World, from my app!");
-
+    public void start() {
         Palette paletteDarker = new Palette();
         PaletteWriter.rectanglePalette(paletteDarker, "palette-darker", 4);
         PaletteWriter.blockPalette(paletteDarker, "palette-block", 4);
