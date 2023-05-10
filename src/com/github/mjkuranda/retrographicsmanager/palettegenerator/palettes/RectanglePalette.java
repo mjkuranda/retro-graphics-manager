@@ -1,14 +1,14 @@
-package com.github.mjkuranda.retrographicsmanager.palettes;
+package com.github.mjkuranda.retrographicsmanager.palettegenerator.palettes;
 
 import java.awt.image.BufferedImage;
 
-public class RectanglePalette extends Palette {
+class RectanglePalette extends Palette {
 
-    public RectanglePalette() {
+    protected RectanglePalette() {
         super();
     }
 
-    public RectanglePalette(boolean isBrighter) {
+    protected RectanglePalette(boolean isBrighter) {
         super(isBrighter);
     }
 

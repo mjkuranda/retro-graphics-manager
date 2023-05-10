@@ -1,4 +1,4 @@
-package com.github.mjkuranda.retrographicsmanager.palettes;
+package com.github.mjkuranda.retrographicsmanager.palettegenerator.palettes;
 
 import com.github.mjkuranda.retrographicsmanager.palettegenerator.PaletteColor;
 

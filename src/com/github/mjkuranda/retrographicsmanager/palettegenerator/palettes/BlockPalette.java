@@ -1,14 +1,14 @@
-package com.github.mjkuranda.retrographicsmanager.palettes;
+package com.github.mjkuranda.retrographicsmanager.palettegenerator.palettes;
 
 import java.awt.image.BufferedImage;
 
-public class BlockPalette extends Palette {
+class BlockPalette extends Palette {
 
-    public BlockPalette() {
+    protected BlockPalette() {
         super();
     }
 
-    public BlockPalette(boolean isBrighter) {
+    protected BlockPalette(boolean isBrighter) {
         super(isBrighter);
     }
 
