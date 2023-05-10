@@ -1,7 +1,7 @@
 package com.github.mjkuranda.retrographicsmanager;
 
 import com.github.mjkuranda.retrographicsmanager.converters.ImageConverter;
-import com.github.mjkuranda.retrographicsmanager.palettegenerator.Palette;
+import com.github.mjkuranda.retrographicsmanager.palettes.Palette;
 import com.github.mjkuranda.retrographicsmanager.palettegenerator.PaletteWriter;
 
 import java.awt.image.BufferedImage;

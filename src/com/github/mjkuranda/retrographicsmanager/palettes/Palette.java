@@ -1,6 +1,10 @@
-package com.github.mjkuranda.retrographicsmanager.palettegenerator;
+package com.github.mjkuranda.retrographicsmanager.palettes;
 
-public class Palette {
+import com.github.mjkuranda.retrographicsmanager.palettegenerator.PaletteColor;
+
+import java.awt.image.BufferedImage;
+
+public abstract class Palette {
     private int[] colors;
     private boolean isBrighter;
 
@@ -14,6 +18,8 @@ public class Palette {
 
         init();
     }
+
+    public abstract BufferedImage get(int scale);
 
     private void init() {
         for (int c = 0; c < 256; c++) {
