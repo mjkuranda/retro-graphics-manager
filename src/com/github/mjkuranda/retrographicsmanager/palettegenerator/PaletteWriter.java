@@ -8,21 +8,11 @@ import java.io.IOException;
 
 public class PaletteWriter {
 
-    public static void rectanglePalette(Palette palette, String fileName, int scale) {
+    public static void save(Palette palette, String fileName, int scale) {
         File file = new File("./dat/output/" + fileName + ".png");
 
         try {
-            ImageIO.write(PaletteGenerator.getRectanglePalette(palette, scale), "png", file);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static void blockPalette(Palette palette, String fileName, int scale) {
-        File file = new File("./dat/output/" + fileName + ".png");
-
-        try {
-            ImageIO.write(PaletteGenerator.getBlockPalette(palette, scale), "png", file);
+            ImageIO.write(palette.get(scale), "png", file);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

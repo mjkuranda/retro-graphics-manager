@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - [@mjkuranda](https://github.com/mjkuranda): RetroGraphicsManager handles all actions instead of Main class.
+- [@mjkuranda](https://github.com/mjkuranda): PaletteWriter simplified.
 
 ### Removed
 - [@mjkuranda](https://github.com/mjkuranda): PaletteGenerator.

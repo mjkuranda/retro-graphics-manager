@@ -4,6 +4,14 @@ import java.awt.image.BufferedImage;
 
 public class RectanglePalette extends Palette {
 
+    public RectanglePalette() {
+        super();
+    }
+
+    public RectanglePalette(boolean isBrighter) {
+        super(isBrighter);
+    }
+
     @Override
     public BufferedImage get(int scale) {
         BufferedImage img = new BufferedImage(32 * scale, 8 * scale, BufferedImage.TYPE_INT_RGB);

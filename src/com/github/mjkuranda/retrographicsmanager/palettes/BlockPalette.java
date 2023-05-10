@@ -4,6 +4,14 @@ import java.awt.image.BufferedImage;
 
 public class BlockPalette extends Palette {
 
+    public BlockPalette() {
+        super();
+    }
+
+    public BlockPalette(boolean isBrighter) {
+        super(isBrighter);
+    }
+
     @Override
     public BufferedImage get(int scale) {
         BufferedImage img = new BufferedImage(8 * scale, 32 * scale, BufferedImage.TYPE_INT_RGB);
