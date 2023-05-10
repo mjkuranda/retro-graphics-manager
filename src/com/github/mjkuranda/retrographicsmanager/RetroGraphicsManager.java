@@ -20,10 +20,14 @@ public class RetroGraphicsManager {
         PaletteWriter.save(blockPaletteDarker, "block-palette-darker", 4);
         PaletteWriter.save(blockPaletteBrighter, "block-palette-brighter", 4);
 
-        BufferedImage img = ImageConverter.toRetroImage("retro.png", true);
-        ImageConverter.saveImage(img, "retro-converted.png");
+        BufferedImage retroBrighter = ImageConverter.toRetroImage("retro.png", true);
+        BufferedImage retroDarker = ImageConverter.toRetroImage("retro.png", false);
+        ImageConverter.saveImage(retroBrighter, "retro-brighter.png");
+        ImageConverter.saveImage(retroDarker, "retro-darker.png");
 
-        BufferedImage img2 = ImageConverter.toRetroImage("space.jpg", true);
-        ImageConverter.saveImage(img2, "space-converted.png");
+        BufferedImage spaceBrighter = ImageConverter.toRetroImage("space.jpg", true);
+        BufferedImage spaceDarker = ImageConverter.toRetroImage("space.jpg", false);
+        ImageConverter.saveImage(spaceBrighter, "space-brighter.png");
+        ImageConverter.saveImage(spaceDarker, "space-darker.png");
     }
 }
