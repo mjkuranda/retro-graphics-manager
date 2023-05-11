@@ -1,5 +1,8 @@
 package com.github.mjkuranda.retrographicsmanager;
 
+import com.github.mjkuranda.retrographicsmanager.commandsystem.CommandFactory;
+import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
+
 import java.util.Scanner;
 
 public class RetroGraphicsManager {
@@ -28,13 +31,46 @@ public class RetroGraphicsManager {
         System.out.println("Author:\t\tmjkuranda");
 
         Scanner scan = new Scanner(System.in);
-        String line;
+        String[] lineArgs;
+        Command c;
 
         while (isRunning) {
-            System.out.print("\n> ");
+            System.out.print("> ");
 
-            line = scan.nextLine();
-            System.out.print(line);
+            lineArgs = scan.nextLine().split(" ");
+
+            if (ifTerminate(lineArgs)) {
+                stop();
+
+                continue;
+            }
+
+            c = CommandFactory.get(lineArgs);
+
+            if (c == null) {
+                System.out.println("Unknown command: " + lineArgs[0]);
+
+                continue;
+            }
+
+            if (!c.isValid()) {
+                continue;
+            }
+
+            c.execute();
         }
+
+        System.out.println("Exit");
+    }
+
+    private boolean ifTerminate(String[] lineArgs) {
+        if (lineArgs.length == 0) {
+            return false;
+        }
+
+        return switch(lineArgs[0]) {
+            case "exit", "end", "term", "terminate" -> true;
+            default -> false;
+        };
     }
 }
