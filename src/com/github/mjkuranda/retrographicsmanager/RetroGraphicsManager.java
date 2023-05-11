@@ -1,10 +1,5 @@
 package com.github.mjkuranda.retrographicsmanager;
 
-import com.github.mjkuranda.retrographicsmanager.converters.ImageConverter;
-import com.github.mjkuranda.retrographicsmanager.palettegenerator.palettes.*;
-import com.github.mjkuranda.retrographicsmanager.palettegenerator.PaletteWriter;
-
-import java.awt.image.BufferedImage;
 import java.util.Scanner;
 
 public class RetroGraphicsManager {
