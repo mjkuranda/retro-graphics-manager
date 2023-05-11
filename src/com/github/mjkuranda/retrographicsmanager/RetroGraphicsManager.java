@@ -32,11 +32,9 @@ public class RetroGraphicsManager {
 
         Scanner scan = new Scanner(System.in);
         String[] lineArgs;
-        Command c;
 
         while (isRunning) {
             System.out.print("> ");
-
             lineArgs = scan.nextLine().split(" ");
 
             if (ifTerminate(lineArgs)) {
@@ -45,19 +43,7 @@ public class RetroGraphicsManager {
                 continue;
             }
 
-            c = CommandFactory.get(lineArgs);
-
-            if (c == null) {
-                System.out.println("Unknown command: " + lineArgs[0]);
-
-                continue;
-            }
-
-            if (!c.isValid()) {
-                continue;
-            }
-
-            c.execute();
+            executeCommand(lineArgs);
         }
 
         System.out.println("Exit");
@@ -72,5 +58,19 @@ public class RetroGraphicsManager {
             case "exit", "end", "term", "terminate" -> true;
             default -> false;
         };
+    }
+
+    private void executeCommand(String lineArgs[]) {
+        Command c = CommandFactory.get(lineArgs);
+
+        if (c == null) {
+            return;
+        }
+
+        if (!c.isValid()) {
+            return;
+        }
+
+        c.execute();
     }
 }
