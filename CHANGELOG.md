@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.0.0] - 2023-05-11
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Command system.
+- [@mjkuranda](https://github.com/mjkuranda): `ls` or `list` command.
 
 ### Changed
 - [@mjkuranda](https://github.com/mjkuranda): More significant role for a `RetroGraphicsManager` class.

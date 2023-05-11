@@ -3,9 +3,8 @@ package com.github.mjkuranda.retrographicsmanager.commandsystem.commands;
 import java.io.File;
 
 /***
- * Correct forms:
- * list in|out
- * ls in|out
+ * list | ls
+ * @param type in or out argument to list all files
  */
 public class ListCommand extends Command {
 
