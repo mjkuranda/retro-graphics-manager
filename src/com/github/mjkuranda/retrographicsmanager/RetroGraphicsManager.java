@@ -22,7 +22,7 @@ public class RetroGraphicsManager {
         run();
     }
 
-    public void stop() {
+    private void stop() {
         isRunning = false;
     }
 
