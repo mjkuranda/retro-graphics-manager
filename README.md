@@ -6,8 +6,6 @@ This console application is divided into three modules:
 
 ## Commands
 Following commands are available:
-- list / ls
-- exit / terminate / term
 
 ### `list`/`ls` command
 ```
@@ -18,7 +16,7 @@ Lists all files that contains specific folder.
 You can list `input` or `output` directory content.
 To list all files from output directory, you need to type: `list out` or `ls out`.
 
-### `exit`/`terminate`|`term` command
+### `exit`/`end`/`terminate`|`term` command
 ```
 exit
 terminate

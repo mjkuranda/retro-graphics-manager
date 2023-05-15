@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Command system.
 - [@mjkuranda](https://github.com/mjkuranda): `ls` or `list` command.
-- [@mjkuranda](https://github.com/mjkuranda): `exit`, `terminate` or `term` command.
+- [@mjkuranda](https://github.com/mjkuranda): `exit`, `end`, `terminate` or `term` command.
 
 ### Changed
 - [@mjkuranda](https://github.com/mjkuranda): More significant role for a `RetroGraphicsManager` class.
