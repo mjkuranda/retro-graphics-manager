@@ -7,14 +7,8 @@ public class CommandFactory {
     public static Command get(String[] lineArgs) {
         Command c = switch (lineArgs[0]) {
             case "list", "ls" -> new ListCommand(lineArgs);
-            default -> null;
+            default -> new UnknownCommand(lineArgs);
         };
-
-        if (c == null) {
-            System.out.println("Unknown command: " + lineArgs[0]);
-
-            return null;
-        }
 
         return c;
     }

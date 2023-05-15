@@ -63,7 +63,7 @@ public class RetroGraphicsManager {
     private void executeCommand(String lineArgs[]) {
         Command c = CommandFactory.get(lineArgs);
 
-        if (c == null || !c.isValid()) {
+        if (!c.isValid()) {
             return;
         }
 
