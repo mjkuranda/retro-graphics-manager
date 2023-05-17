@@ -6,7 +6,7 @@ package com.github.mjkuranda.retrographicsmanager;
 public class Main {
 
     public static void main(String[] args) {
-        RetroGraphicsManager app = new RetroGraphicsManager();
+        RetroGraphicsManager app = RetroGraphicsManager.getInstance();
         app.start();
     }
 }

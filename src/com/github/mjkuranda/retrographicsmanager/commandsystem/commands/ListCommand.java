@@ -6,10 +6,13 @@ import java.io.File;
  * list | ls
  * @param type in or out argument to list all files
  */
-public class ListCommand extends Command {
+public class ListCommand implements Command {
+
+    // TODO: CommandValidator to prevalidate command
+    private String[] lineArgs;
 
     public ListCommand(String[] lineArgs) {
-        super(lineArgs);
+        this.lineArgs = lineArgs;
     }
 
     @Override
