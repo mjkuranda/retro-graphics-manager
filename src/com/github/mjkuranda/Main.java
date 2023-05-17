@@ -1,4 +1,6 @@
-package com.github.mjkuranda.retrographicsmanager;
+package com.github.mjkuranda;
+
+import com.github.mjkuranda.retrographicsmanager.RetroGraphicsManager;
 
 /***
  * @author mjkuranda

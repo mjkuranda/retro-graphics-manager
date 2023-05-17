@@ -5,9 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.1.0] - 2023-05-15
+## [3.1.0] - 2023-05-17
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Unknown command to implement `Null object design pattern`.
+- [@mjkuranda](https://github.com/mjkuranda): `ApplicationManager` based on singleton design pattern.
 
 ### Changed
 - [@mjkuranda](https://github.com/mjkuranda): Command to interface instead of abstract class.
@@ -33,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [@mjkuranda](https://github.com/mjkuranda): Abstraction for Palette objects.
 
 ### Changed
-- [@mjkuranda](https://github.com/mjkuranda): RetroGraphicsManager handles all actions instead of Main class.
+- [@mjkuranda](https://github.com/mjkuranda): RetroGraphicsManager handles all actions instead of com.github.mjkuranda.Main class.
 - [@mjkuranda](https://github.com/mjkuranda): PaletteWriter simplified.
 
 ### Removed

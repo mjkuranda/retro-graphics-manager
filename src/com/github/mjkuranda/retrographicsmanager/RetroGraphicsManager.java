@@ -6,22 +6,22 @@ import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
 import java.util.Scanner;
 
 public class RetroGraphicsManager {
-    public static final String VERSION = "3.0.0";
-    public static final String RELEASE = "2023-05-11";
+    public static final String VERSION = "3.1.0";
+    public static final String RELEASE = "2023-05-17";
 
-    private boolean isRunning;
+    private final ApplicationManager manager;
 
     public RetroGraphicsManager() {
-        isRunning = false;
+        manager = ApplicationManager.getInstance();
     }
 
     public void start() {
-        isRunning = true;
+        manager.setRunning(true);
         run();
     }
 
     private void stop() {
-        isRunning = false;
+        manager.setRunning(false);
     }
 
     private void run() {
@@ -33,7 +33,7 @@ public class RetroGraphicsManager {
         Scanner scan = new Scanner(System.in);
         String[] lineArgs;
 
-        while (isRunning) {
+        while (manager.isRunning()) {
             System.out.print("> ");
             lineArgs = scan.nextLine().split(" ");
 
