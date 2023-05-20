@@ -4,7 +4,12 @@ import java.io.File;
 
 public class ListCommand implements Command {
 
-    private String[] lineArgs;
+    private final String[] lineArgs;
+
+    /**
+     * in or out
+     */
+    private String dirType;
 
     public ListCommand(String[] lineArgs) {
         this.lineArgs = lineArgs;
@@ -12,13 +17,21 @@ public class ListCommand implements Command {
 
     @Override
     public void execute() {
-        if ("in".equals(lineArgs[1])) {
-            listFiles(new File("dat/input"));
+//        if ("in".equals(lineArgs[1])) {
+//            listFiles(new File("dat/input"));
+//
+//            return;
+//        }
+//
+//        listFiles(new File("dat/output"));
 
-            return;
-        }
+        listFiles(new File("dat/" + dirType + "put"));
+    }
 
-        listFiles(new File("dat/output"));
+    public ListCommand setDirType(String type) {
+        this.dirType = type;
+
+        return this;
     }
 
     private void listFiles(File folder) {

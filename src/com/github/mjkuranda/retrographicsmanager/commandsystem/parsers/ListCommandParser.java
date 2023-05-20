@@ -17,6 +17,6 @@ public class ListCommandParser implements CommandParser {
             throw new IncorrectCommandArgumentException(lineArgs[1]);
         }
 
-        return new ListCommand(lineArgs);
+        return new ListCommand(lineArgs).setDirType(lineArgs[1]);
     }
 }
