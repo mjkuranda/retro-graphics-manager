@@ -9,9 +9,4 @@ public class TerminateCommand implements Command {
         RetroGraphicsManager app = RetroGraphicsManager.getInstance();
         app.stop();
     }
-
-    @Override
-    public boolean isValid() {
-        return true;
-    }
 }

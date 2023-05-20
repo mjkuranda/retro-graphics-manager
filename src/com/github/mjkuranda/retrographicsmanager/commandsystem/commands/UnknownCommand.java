@@ -12,9 +12,4 @@ public class UnknownCommand implements Command {
     public void execute() {
         System.out.println("Unknown command: " + lineArgs[0]);
     }
-
-    @Override
-    public boolean isValid() {
-        return true;
-    }
 }

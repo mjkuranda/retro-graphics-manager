@@ -1,7 +1,6 @@
 package com.github.mjkuranda.retrographicsmanager;
 
 import com.github.mjkuranda.retrographicsmanager.commandsystem.CommandCreator;
-import com.github.mjkuranda.retrographicsmanager.commandsystem.CommandFactory;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
 
 import java.util.Scanner;

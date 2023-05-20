@@ -26,23 +26,6 @@ public class ListCommand implements Command {
         listFiles(new File("dat/output"));
     }
 
-    @Override
-    public boolean isValid() {
-        if (lineArgs.length != 2) {
-            System.out.println("Error: Incomplete command");
-
-            return false;
-        }
-
-        if (!"in".equals(lineArgs[1]) && !"out".equals(lineArgs[1])) {
-            System.out.println("Error: incorrect argument - " + lineArgs[1]);
-
-            return false;
-        }
-
-        return true;
-    }
-
     private void listFiles(File folder) {
         File[] listOfFiles = folder.listFiles();
 
