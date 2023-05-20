@@ -1,6 +1,7 @@
 package com.github.mjkuranda.retrographicsmanager.commandsystem.parsers;
 
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
+import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.DirTypes;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.ListCommand;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.exceptions.IncompleteCommandException;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.exceptions.IncorrectCommandArgumentException;
@@ -17,6 +18,6 @@ public class ListCommandParser implements CommandParser {
             throw new IncorrectCommandArgumentException(lineArgs[1]);
         }
 
-        return new ListCommand(lineArgs).setDirType(lineArgs[1]);
+        return new ListCommand(lineArgs).setDirType("in".equals(lineArgs[1]) ? DirTypes.IN : DirTypes.OUT);
     }
 }

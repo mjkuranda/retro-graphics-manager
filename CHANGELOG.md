@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.4.0] - 2023-05-20
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Option `dirType` to `ListCommand`.
+- [@mjkuranda](https://github.com/mjkuranda): Scale parameter to `GeneratePaletteCommand`.
+
+### Changed
+- [@mjkuranda](https://github.com/mjkuranda): Optimized `ListCommand` and `GeneratePaletteCommand` commands.
 
 ## [3.3.0] - 2023-05-20
 ### Added

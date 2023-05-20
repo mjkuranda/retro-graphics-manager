@@ -6,10 +6,7 @@ public class ListCommand implements Command {
 
     private final String[] lineArgs;
 
-    /**
-     * in or out
-     */
-    private String dirType;
+    private DirTypes dirType;
 
     public ListCommand(String[] lineArgs) {
         this.lineArgs = lineArgs;
@@ -17,18 +14,10 @@ public class ListCommand implements Command {
 
     @Override
     public void execute() {
-//        if ("in".equals(lineArgs[1])) {
-//            listFiles(new File("dat/input"));
-//
-//            return;
-//        }
-//
-//        listFiles(new File("dat/output"));
-
-        listFiles(new File("dat/" + dirType + "put"));
+        listFiles(new File("dat/" + dirType.getType()));
     }
 
-    public ListCommand setDirType(String type) {
+    public ListCommand setDirType(DirTypes type) {
         this.dirType = type;
 
         return this;
