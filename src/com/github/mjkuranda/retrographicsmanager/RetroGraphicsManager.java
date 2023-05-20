@@ -6,7 +6,7 @@ import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
 import java.util.Scanner;
 
 public class RetroGraphicsManager {
-    public static final String VERSION = "3.2.0";
+    public static final String VERSION = "3.3.0";
     public static final String RELEASE = "2023-05-20";
 
     private static RetroGraphicsManager app;
