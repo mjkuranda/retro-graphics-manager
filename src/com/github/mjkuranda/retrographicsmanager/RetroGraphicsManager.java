@@ -1,13 +1,13 @@
 package com.github.mjkuranda.retrographicsmanager;
 
-import com.github.mjkuranda.retrographicsmanager.commandsystem.CommandFactory;
+import com.github.mjkuranda.retrographicsmanager.commandsystem.CommandCreator;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
 
 import java.util.Scanner;
 
 public class RetroGraphicsManager {
-    public static final String VERSION = "3.1.0";
-    public static final String RELEASE = "2023-05-17";
+    public static final String VERSION = "3.2.0";
+    public static final String RELEASE = "2023-05-20";
 
     private static RetroGraphicsManager app;
     private final ApplicationManager manager;
@@ -56,24 +56,14 @@ public class RetroGraphicsManager {
         System.out.println("Author:\t\tmjkuranda");
 
         Scanner scan = new Scanner(System.in);
-        String[] lineArgs;
+        Command c;
 
         while (manager.isRunning()) {
             System.out.print("> ");
-            lineArgs = scan.nextLine().split(" ");
-            executeCommand(lineArgs);
+            c = CommandCreator.parse(scan.nextLine());
+            c.execute();
         }
 
         System.out.println("Exit");
-    }
-
-    private void executeCommand(String lineArgs[]) {
-        Command c = CommandFactory.get(lineArgs);
-
-        if (!c.isValid()) {
-            return;
-        }
-
-        c.execute();
     }
 }
