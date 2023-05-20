@@ -4,7 +4,9 @@ import java.io.File;
 
 public class ListCommand implements Command {
 
-    private String[] lineArgs;
+    private final String[] lineArgs;
+
+    private DirTypes dirType;
 
     public ListCommand(String[] lineArgs) {
         this.lineArgs = lineArgs;
@@ -12,13 +14,13 @@ public class ListCommand implements Command {
 
     @Override
     public void execute() {
-        if ("in".equals(lineArgs[1])) {
-            listFiles(new File("dat/input"));
+        listFiles(new File("dat/" + dirType.getType()));
+    }
 
-            return;
-        }
+    public ListCommand setDirType(DirTypes type) {
+        this.dirType = type;
 
-        listFiles(new File("dat/output"));
+        return this;
     }
 
     private void listFiles(File folder) {
