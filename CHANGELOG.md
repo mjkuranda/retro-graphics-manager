@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.2.0] - 2023-05-20
+### Added
+- [@mjkuranda](https://github.com/mjkuranda): Command parsers that create final command object.
+- [@mjkuranda](https://github.com/mjkuranda): CommandCreator handles creating command objects and catches errors.
+- [@mjkuranda](https://github.com/mjkuranda): RetroGraphicsManager exceptions.
+
+### Changed
+- [@mjkuranda](https://github.com/mjkuranda): Main program loop execution.
+
+### Removed
+- [@mjkuranda](https://github.com/mjkuranda): `isValid` method of command interface. The parsers are handling processing now.
+- [@mjkuranda](https://github.com/mjkuranda): CommandFactory.
+
 ## [3.1.0] - 2023-05-17
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Unknown command to implement `Null object design pattern`.
