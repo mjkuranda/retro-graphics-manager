@@ -19,9 +19,12 @@ public class GeneratePaletteCommand implements Command {
 
     private boolean isBrighter;
 
+    private int scale;
+
     public GeneratePaletteCommand(String[] lineArgs) {
         this.type = "block".equals(lineArgs[2]) ? PaletteTypes.BLOCK : PaletteTypes.RECTANGLE;
         this.isBrighter = "light".equals(lineArgs[1]);
+        this.scale = lineArgs.length > 3 && lineArgs[3].matches("^-?\\d+$") ? Integer.parseInt(lineArgs[3]) : 1;
         this.paletteName = getPaletteName(lineArgs);
     }
 
@@ -36,12 +39,12 @@ public class GeneratePaletteCommand implements Command {
         }
 
         Palette palette = PaletteFactory.get(type, isBrighter);
-        PaletteWriter.save(palette, paletteName, 1);
+        PaletteWriter.save(palette, paletteName, scale);
     }
 
     private String getPaletteName(String[] lineArgs) {
         String dateTime = LocalDateTime.now().toString().substring(0, 19).replaceAll(":", "-");
 
-        return dateTime + "-palette-" + lineArgs[1] + "-" + lineArgs[2];
+        return dateTime + "-palette-" + lineArgs[1] + "-" + lineArgs[2] + "-" + this.scale;
     }
 }
