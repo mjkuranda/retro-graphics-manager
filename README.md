@@ -42,7 +42,7 @@ generate dark block 4 my-palette
 gen dark block 4 my-palette
 ```
 
-### `exit`/`end`/`terminate`|`term` command
+### `exit`/`end`/`terminate`/`term` command
 ```
 exit
 terminate
