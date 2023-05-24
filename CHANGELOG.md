@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.4.1] - 2023-05-24
+### Added
+- [@mjkuranda](https://github.com/mjkuranda): Utils class with `isInteger` method.
+
+### Fixed
+- [@mjkuranda](https://github.com/mjkuranda): Typing two numbers at `gen` command.
+- [@mjkuranda](https://github.com/mjkuranda): Fetching new palette name.
+
+### Removed
+- [@mjkuranda](https://github.com/mjkuranda): `setDirType` removed. Simplified ListCommand constructor.
+
 ## [3.4.0] - 2023-05-20
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): Option `dirType` to `ListCommand`.

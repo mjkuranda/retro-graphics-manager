@@ -6,8 +6,8 @@ import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
 import java.util.Scanner;
 
 public class RetroGraphicsManager {
-    public static final String VERSION = "3.4.0";
-    public static final String RELEASE = "2023-05-20";
+    public static final String VERSION = "3.4.1";
+    public static final String RELEASE = "2023-05-24";
 
     private static RetroGraphicsManager app;
     private final ApplicationManager manager;

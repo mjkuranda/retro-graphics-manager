@@ -12,7 +12,7 @@ Following commands are available:
 list in|out
 ls in|out
 ```
-Lists all files that contains specific folder.
+Lists all files that are located in a specific folder.
 You can list `input` or `output` directory content.
 To list all files from output directory, you need to type: `list out` or `ls out`.
 
@@ -42,7 +42,7 @@ generate dark block 4 my-palette
 gen dark block 4 my-palette
 ```
 
-### `exit`/`end`/`terminate`|`term` command
+### `exit`/`end`/`terminate`/`term` command
 ```
 exit
 terminate
