@@ -4,23 +4,15 @@ import java.io.File;
 
 public class ListCommand implements Command {
 
-    private final String[] lineArgs;
-
     private DirTypes dirType;
 
-    public ListCommand(String[] lineArgs) {
-        this.lineArgs = lineArgs;
+    public ListCommand(String type) {
+        this.dirType = DirTypes.IN.getType().equals(type) ? DirTypes.IN : DirTypes.OUT;
     }
 
     @Override
     public void execute() {
         listFiles(new File("dat/" + dirType.getType()));
-    }
-
-    public ListCommand setDirType(DirTypes type) {
-        this.dirType = type;
-
-        return this;
     }
 
     private void listFiles(File folder) {

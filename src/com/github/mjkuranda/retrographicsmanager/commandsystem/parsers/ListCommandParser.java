@@ -18,6 +18,6 @@ public class ListCommandParser implements CommandParser {
             throw new IncorrectCommandArgumentException(lineArgs[1]);
         }
 
-        return new ListCommand(lineArgs).setDirType("in".equals(lineArgs[1]) ? DirTypes.IN : DirTypes.OUT);
+        return new ListCommand(lineArgs[1]);
     }
 }
