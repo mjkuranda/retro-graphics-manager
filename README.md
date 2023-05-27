@@ -21,25 +21,43 @@ To list all files from output directory, you need to type: `list out` or `ls out
 generate light|dark block|rectangle [scale] [name]
 gen light|dark block|rectangle [scale] [name]
 ```
-To generate light, block palette with default name, type one of them:
+Generates 8-bit palette.
+To generate light, block palette with default name, type one of the following command:
 ```
 generate light block
 gen light block
 ```
-To generate dark, rectangle palette with `my-palette` name, type one of them:
+To generate dark, rectangle palette with `my-palette` name, type one of the following command:
 ```
 generate dark rectangle my-palette
 gen dark rectangle my-palette
 ```
-To generate light, block palette, and 5 as scale parameter, type one of them:
+To generate light, block palette, and 5 as scale parameter, type one of the following command:
 ```
 generate light block 5
 gen light block 5
 ```
-To generate dark, block palette, 4 as scale parameter and `my-palette` name, type one of them:
+To generate dark, block palette, 4 as scale parameter and `my-palette` name, type one of the following command:
 ```
 generate dark block 4 my-palette
 gen dark block 4 my-palette
+```
+
+### `convert`/`conv` command
+```
+convert light|dark {fileName} [convertedFileName]
+conv light|dark {fileName} [convertedFileName]
+```
+Converts any image file to 8-bit image.
+To convert `myimage.png` to `convmyimage.png` using light palette, type one of them:
+```
+convert light myimage.png convmyimage.png
+conv light myimage.png convmyimage.png
+```
+You don't have to specify an image name. To convert `myimage.png` using dark palette, so you don't want to give any name, type one of the following command:
+```
+convert dark myimage.png
+conv dark myimage.png
 ```
 
 ### `exit`/`end`/`terminate`/`term` command
