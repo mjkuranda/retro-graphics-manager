@@ -8,6 +8,7 @@ public class CommandParserFactory {
         return switch(arg) {
             case "list", "ls" -> new ListCommandParser();
             case "generate", "gen" -> new GeneratePaletteCommandParser();
+            case "convert", "conv" -> new ConvertCommandParser();
             case "exit", "end", "terminate", "term" -> new TerminateCommandParser();
             default -> new UnknownCommandParser();
         };
