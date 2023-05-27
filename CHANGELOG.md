@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [@mjkuranda](https://github.com/mjkuranda): `convert`/`conv` command that allows converting images into 8-bit images.
 - [@mjkuranda](https://github.com/mjkuranda): ConvertParser to parse convert command.
+- [@mjkuranda](https://github.com/mjkuranda): `FileNotFoundException` and `FileExistsException`.
 
 ## [3.4.1] - 2023-05-24
 ### Added

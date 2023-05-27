@@ -25,7 +25,7 @@ public class ConvertCommandParser implements CommandParser {
             throw new FileNotFoundException(lineArgs[2]);
         }
 
-        if(existsImage(lineArgs[3])) {
+        if(lineArgs[3].length() > 0 && existsImage(lineArgs[3])) {
             throw new FileExistsException(lineArgs[3]);
         }
 
@@ -33,8 +33,6 @@ public class ConvertCommandParser implements CommandParser {
     }
 
     private boolean existsImage(String name) {
-        File file = new File(name);
-
-        return file.exists();
+        return new File("dat/input/" + name).exists();
     }
 }

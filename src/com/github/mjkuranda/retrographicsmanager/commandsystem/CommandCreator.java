@@ -1,10 +1,10 @@
 package com.github.mjkuranda.retrographicsmanager.commandsystem;
 
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.Command;
+import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.FileErrorCommand;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.IncompleteCommand;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.commands.IncorrectArgumentCommand;
-import com.github.mjkuranda.retrographicsmanager.commandsystem.exceptions.IncompleteCommandException;
-import com.github.mjkuranda.retrographicsmanager.commandsystem.exceptions.IncorrectCommandArgumentException;
+import com.github.mjkuranda.retrographicsmanager.commandsystem.exceptions.*;
 import com.github.mjkuranda.retrographicsmanager.commandsystem.parsers.CommandParser;
 
 public class CommandCreator {
@@ -20,6 +20,8 @@ public class CommandCreator {
             c = new IncorrectArgumentCommand(err.getArgument());
         } catch (IncompleteCommandException err) {
             c = new IncompleteCommand(err.getMessage());
+        } catch (FileNotFoundException | FileExistsException err) {
+            c = new FileErrorCommand(err.getMessage());
         }
 
         return c;
