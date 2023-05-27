@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 
 public class ConvertCommand implements Command {
 
@@ -27,6 +28,14 @@ public class ConvertCommand implements Command {
         }
 
         BufferedImage img = ImageConverter.toRetroImage(lineArgs[2], "light".equals(lineArgs[1]));
-        ImageConverter.saveImage(img, lineArgs[3]);
+        ImageConverter.saveImage(img, getImageName(lineArgs));
+    }
+
+    private String getImageName(String[] lineArgs) {
+        if (lineArgs.length < 4) {
+            return "converted-" + lineArgs[2];
+        }
+
+        return lineArgs[3];
     }
 }

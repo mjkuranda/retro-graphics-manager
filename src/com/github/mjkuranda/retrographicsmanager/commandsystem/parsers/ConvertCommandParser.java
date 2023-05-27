@@ -13,7 +13,7 @@ public class ConvertCommandParser implements CommandParser {
 
     @Override
     public Command process(String[] lineArgs) {
-        if (lineArgs.length < 4) {
+        if (lineArgs.length < 3) {
             throw new IncompleteCommandException(lineArgs[0]);
         }
 
@@ -25,7 +25,7 @@ public class ConvertCommandParser implements CommandParser {
             throw new FileNotFoundException(lineArgs[2]);
         }
 
-        if(lineArgs[3].length() > 0 && existsImage(lineArgs[3])) {
+        if(lineArgs.length > 3 && lineArgs[3].length() > 0 && existsImage(lineArgs[3])) {
             throw new FileExistsException(lineArgs[3]);
         }
 
